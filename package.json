@@ -1,0 +1,19 @@
+{
+    "name": "cursor-teams-reminder",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "esbuild server.js --bundle --platform=node --target=node20 --format=esm --outfile=dist/server.js --packages=external --minify --legal-comments=none",
+        "dev": "node server.js",
+        "start": "node dist/server.js",
+        "send": "node run-once.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.7",
+        "express": "^5.2.1",
+        "node-cron": "^3.0.3"
+    },
+    "devDependencies": {
+        "esbuild": "^0.25.0"
+    }
+}
